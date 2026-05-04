@@ -1,6 +1,6 @@
 # VisionCore OS
 
-Repositorio principal do **VisionCore OS**, um SaaS vertical para oticas independentes, construido em `Next.js + Prisma + PostgreSQL` com foco em multi-tenancy, previsibilidade operacional e crescimento modular.
+Repositorio principal do **VisionCore OS**, um SaaS vertical para oticas independentes, construido em `Next.js + PostgreSQL` com foco em multi-tenancy, previsibilidade operacional e crescimento modular.
 
 Este documento e o guia tecnico de entrada para quem esta trabalhando no codigo hoje.
 
@@ -30,21 +30,17 @@ Se voce vai codificar hoje, priorize trabalho que se encaixe em `Core Revenue Op
 
 ## Stack e Setup
 
-**Stack:** TypeScript, Next.js (App Router), Prisma, PostgreSQL e NextAuth.
+**Stack:** TypeScript, Next.js (App Router), PostgreSQL e NextAuth.
 
 **Setup local:**
 
 1. Garanta Node.js 18+.
 2. Preencha `/.env` a partir de `/.env.example`.
 3. Instale dependencias com `npm install`.
-4. Rode `npx prisma generate`.
-5. Rode `npm run db:push`.
-6. Se necessario, rode `npm run db:seed`.
 
 **Comandos frequentes:**
 
 - `npm run dev`
-- `npm run db:studio`
 - `npm run typecheck`
 - `npm run build`
 
