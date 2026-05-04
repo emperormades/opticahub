@@ -1,0 +1,23 @@
+{
+    "crons": [
+        {
+            "path": "/api/jobs/run",
+            "schedule": "0 8 * * *"
+        }
+    ],
+    "regions": [
+        "gru1"
+    ],
+    "framework": "nextjs",
+    "buildCommand": "npx prisma generate && next build",
+    "installCommand": "npm install",
+    "env": [
+        "DATABASE_URL",
+        "NEXTAUTH_SECRET",
+        "NEXTAUTH_URL",
+        "CRON_SECRET",
+        "WHATSAPP_TOKEN",
+        "WHATSAPP_PHONE_ID",
+        "WHATSAPP_API_URL"
+    ]
+}

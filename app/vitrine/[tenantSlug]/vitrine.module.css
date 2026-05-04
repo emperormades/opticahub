@@ -1,0 +1,208 @@
+.page {
+  min-height: 100vh;
+  padding: 20px 16px 28px;
+  background:
+    radial-gradient(circle at 10% -5%, rgba(227, 83, 54, 0.2), transparent 35%),
+    linear-gradient(180deg, #fff7f2 0%, #ffffff 42%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hero {
+  display: grid;
+  gap: 8px;
+}
+
+.storePill {
+  justify-self: start;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #f3d4ca;
+  color: #8d331f;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.title {
+  font-size: 29px;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: #1d232d;
+}
+
+.subtitle {
+  color: #4e5d75;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.card,
+.timelineCard {
+  background: #ffffff;
+  border: 1px solid #e8edf5;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+}
+
+.form {
+  display: grid;
+  gap: 10px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #273247;
+}
+
+.input {
+  min-height: 46px;
+  border-radius: 12px;
+  border: 1px solid #ccd5e3;
+  padding: 0 12px;
+  font-size: 15px;
+  color: #111827;
+  background: #ffffff;
+}
+
+.input:focus {
+  border-color: #e35336;
+  box-shadow: 0 0 0 3px rgba(227, 83, 54, 0.15);
+}
+
+.btnPrimary,
+.btnWhats {
+  min-height: 46px;
+  border-radius: 12px;
+  border: 0;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 120ms ease;
+}
+
+.btnPrimary {
+  background: #e35336;
+  color: #ffffff;
+}
+
+.btnPrimary:disabled {
+  opacity: 0.7;
+}
+
+.feedback {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #66758f;
+}
+
+.error {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #d32f2f;
+  font-weight: 600;
+}
+
+.timelineHeader {
+  margin-bottom: 14px;
+}
+
+.timelineTitle {
+  font-size: 15px;
+  font-weight: 800;
+  color: #1f2a3d;
+}
+
+.timelineMeta {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #62718a;
+}
+
+.timeline {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.timelineItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #e4eaf5;
+}
+
+.dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dotDone {
+  background: #1f9d58;
+}
+
+.dotDone::after {
+  content: "✓";
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.dotCurrent {
+  background: #f5af19;
+}
+
+.dotCurrent::after {
+  content: "•";
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.dotPending {
+  background: #c9d3e2;
+}
+
+.stepLabel {
+  font-size: 15px;
+  color: #1f2a3d;
+  font-weight: 700;
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.btnWhats {
+  width: 100%;
+  background: #1ea952;
+  color: #ffffff;
+}
+
+.btnPrimary:hover,
+.btnWhats:hover {
+  filter: brightness(0.96);
+}
+
+@media (min-width: 720px) {
+  .page {
+    max-width: 620px;
+    margin: 0 auto;
+    padding-top: 28px;
+  }
+}

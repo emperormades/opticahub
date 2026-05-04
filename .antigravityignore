@@ -1,0 +1,36 @@
+# Antigravity Ignore — Bloqueia arquivos irrelevantes da visão da IA
+# Compilados e cache do Next.js
+.next/
+out/
+
+# Dependências
+node_modules/
+
+# Prisma gerado (só o schema original é relevante)
+prisma/migrations/
+node_modules/.prisma/
+node_modules/@prisma/
+
+# Cobertura e builds
+coverage/
+dist/
+build/
+
+# Git
+.git/
+
+# Logs e temporários
+*.log
+*.lock
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+
+# Husky e CI
+.husky/_/
+
+# Docker
+docker-data/
+
+# Outros
+*.map

@@ -1,0 +1,27 @@
+# PostgreSQL opcional — app em modo offline sem ORM real (stub em código).
+#
+# Subir: docker compose up -d
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: rupta_os_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: rupta_admin
+      POSTGRES_PASSWORD: rupta_secret_2024
+      POSTGRES_DB: rupta_os
+      TZ: UTC
+    ports:
+      - '5432:5432'
+    volumes:
+      - rupta_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U rupta_admin -d rupta_os']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+volumes:
+  rupta_pgdata:

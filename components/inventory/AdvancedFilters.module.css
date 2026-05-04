@@ -1,0 +1,148 @@
+.container {
+    background: #fdfdfd;
+    padding: 24px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.header {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.btnPrimary {
+    background: #008fd3;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btnPrimary:hover {
+    background: #007bbd;
+}
+
+.btnSecondary {
+    background: #00aaff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px 24px;
+    align-items: flex-end;
+}
+
+.fieldGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.label i {
+    color: #999;
+    font-size: 14px;
+}
+
+.input,
+.select {
+    height: 38px;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    padding: 0 12px;
+    font-size: 13px;
+    color: #333;
+    background: #fff;
+    width: 100%;
+    transition: border-color 0.2s;
+}
+
+.input:focus,
+.select:focus {
+    outline: none;
+    border-color: #008fd3;
+}
+
+.searchWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 10px;
+    color: #999;
+}
+
+.searchWrapper .input {
+    padding-left: 32px;
+}
+
+.dateRange {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dateRange span {
+    color: #999;
+    font-size: 12px;
+}
+
+.dateRange .input {
+    flex: 1;
+}
+
+.actions {
+    grid-column: span 4;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px;
+}
+
+.btnSearch {
+    background: #008fd3;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btnSearch:hover {
+    background: #007bbd;
+}
+
+.select:disabled {
+    background: #f5f5f5;
+    cursor: not-allowed;
+}

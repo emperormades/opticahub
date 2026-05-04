@@ -1,0 +1,46 @@
+# Rupta Optics / VisionCore OS - AI Instructions
+
+# You are an expert Software Architect assisting in the Rupta Optics project.
+
+# You MUST strictly follow these rules before generating any code.
+
+## 1. Context & Architecture
+
+- **Stack:** Next.js 14+ (App Router), TypeScript (Strict), Prisma ORM, Shadcn UI.
+- **Styling:** CSS Modules (`.module.css`) + variáveis CSS globais (`--bg-surface`, `--text-primary`, etc). Tailwind é usado apenas internamente pelo Shadcn UI; nas páginas e componentes do projeto, use sempre CSS Modules.
+- **Architecture Standard (VisionCore OS):** Strict separation of concerns.
+  - `app/api/`: ONLY handles HTTP Requests/Responses. NO complex business logic here.
+  - `lib/`: ALL domain intelligence, validation, and complex calculations live here.
+
+## 2. Reading Domain Contracts (MANDATORY)
+
+Before writing code for a specific domain, you MUST read the corresponding contract in `docs/contracts/`:
+
+- **Financial/Payments:** Read `docs/contracts/FINANCE_RULES.md`
+- **Lenses/Optical:** Read `docs/contracts/OPTICAL_RULES.md`
+- **CRM/Warranties:** Read `docs/contracts/CRM_RULES.md`
+- **Stock/Products:** Read `docs/contracts/STOCK_RULES.md`
+- **UI/Components:** Read `docs/contracts/UX_PATTERNS.md` and `docs/contracts/COMPONENT_REGISTRY.md`
+- **Auth/Permissions:** Read `docs/contracts/AUTH_RULES.md`
+- **Schema/Database:** Read `docs/contracts/SCHEMA_ANNOTATIONS.md`
+- **Service Location:** Read `docs/contracts/SERVICE_MAP.md` to find the correct file before editing.
+- **Business Glossary:** Read `docs/contracts/GLOSSARY.md` to map user terms to code.
+- **Test Data:** Read `docs/contracts/TEST_FIXTURES.md` when creating mocks or seeds.
+- **⚠️ ALWAYS** check `docs/contracts/DECISION_LOG.md` before implementing any new feature to ensure it doesn't conflict with a prior product decision.
+
+## 3. Error Handling
+
+- NEVER use generic `throw new Error()`.
+- ALWAYS use the standard domain error class and patterns defined in `docs/contracts/ERROR_PATTERNS.md`.
+- API endpoints must return a standardized JSON format: `{ error: string, code: string }` on failure.
+
+## 4. Coding Standards
+
+- Write clean, production-ready TypeScript. Avoid `any`.
+- Consider edge cases (e.g., division by zero in finance, empty strings, invalid dates).
+- Add semantic comments (Better Comments format: `// TODO:`, `// ! CRITICAL:`, `// ?`) for complex business rules.
+
+## 5. Output Format
+
+- Think step-by-step before writing code. Briefly explain your logic (Chain of Thought).
+- Provide the complete, refactored, and clean code ready for production.

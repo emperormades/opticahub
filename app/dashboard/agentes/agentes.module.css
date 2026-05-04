@@ -1,0 +1,276 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    height: 100%;
+}
+
+.layout {
+    display: flex;
+    gap: var(--space-5);
+    align-items: flex-start;
+    height: calc(100vh - 120px);
+}
+
+.sidebar {
+    width: 320px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    height: 100%;
+    overflow: hidden;
+}
+
+.tabs {
+    display: flex;
+    padding: var(--space-2);
+    gap: var(--space-1);
+    background: var(--bg-overlay);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.tab {
+    flex: 1;
+    padding: var(--space-2);
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.tab:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.tabActive {
+    composes: tab;
+    background: var(--brand-primary);
+    color: white;
+    font-weight: 600;
+}
+
+.listArea {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--space-3);
+    scrollbar-width: thin;
+}
+
+/* Agent Grid (Marketplace) */
+.agentGrid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.agentCard {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    transition: border-color var(--transition-fast);
+}
+
+.agentCard:hover {
+    border-color: var(--brand-primary-light);
+}
+
+.agentHeader {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.agentIcon {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-overlay);
+    border-radius: var(--radius-md);
+}
+
+.agentName {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.agentDesc {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.agentPrice {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--brand-primary);
+}
+
+/* Worker List (Minha Equipe) */
+.workerList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.emptyWorkers {
+    text-align: center;
+    padding: var(--space-6) 0;
+    font-size: 13px;
+    color: var(--text-tertiary);
+}
+
+.workerItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-3);
+    background: var(--bg-elevated);
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.workerItem:hover {
+    background: var(--bg-hover);
+}
+
+.workerItemActive {
+    composes: workerItem;
+    background: var(--bg-overlay);
+    border-color: var(--brand-primary);
+}
+
+.workerLeft {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.workerName {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.workerStatus {
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+/* Brain UI (Details Panel) */
+.detailsPanel {
+    flex: 1;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    height: 100%;
+    overflow-y: auto;
+    min-width: 0;
+}
+
+.brainUI {
+    display: flex;
+    flex-direction: column;
+}
+
+.brainHeader {
+    padding: var(--space-6);
+    border-bottom: 1px solid var(--border-subtle);
+    background: linear-gradient(180deg, rgba(227, 83, 54, 0.05) 0%, transparent 100%);
+}
+
+.brainTitleRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-5);
+}
+
+.brainName {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+}
+
+.brainSubtitle {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.kpiRow {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.kpiCard {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-default);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    min-width: 120px;
+}
+
+.kpiLabel {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--text-tertiary);
+}
+
+.kpiValue {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-top: 4px;
+}
+
+.brainBody {
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+
+.promptDisplay {
+    background: var(--bg-overlay);
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--brand-primary-light);
+    white-space: pre-wrap;
+    border-left: 3px solid var(--brand-primary);
+}
+
+.jsonDisplay {
+    background: var(--bg-overlay);
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    font-family: monospace;
+    font-size: 12px;
+    color: var(--text-secondary);
+    overflow-x: auto;
+}

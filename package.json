@@ -1,0 +1,42 @@
+{
+  "name": "rupta.optics",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_OPTIONS=\"--max-old-space-size=4096\" next dev",
+    "typecheck": "tsc --noEmit",
+    "test:core": "tsx tests/core-validation.ts",
+    "build": "next build",
+    "start": "next start",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "babel-plugin-react-compiler": "^1.0.0",
+    "bwip-js": "^4.8.0",
+    "cron-schedule": "^6.0.0",
+    "fast-xml-parser": "^5.4.1",
+    "geist": "^1.7.0",
+    "next": "16.1.6",
+    "next-auth": "^5.0.0-beta.30",
+    "node-cron": "^4.2.1",
+    "node-ofx-parser": "^0.5.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "recharts": "^3.7.0",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@types/bwip-js": "^3.2.3",
+    "@types/node": "^20",
+    "@types/node-cron": "^3.0.11",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/xml2js": "^0.4.14",
+    "cross-env": "^10.1.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.3.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5"
+  }
+}
